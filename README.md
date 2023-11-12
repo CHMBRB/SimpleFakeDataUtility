@@ -1,4 +1,4 @@
-# Fake Data Creator
+# Simple Fake Data Utility
 
 Most applications require data to be useful.
 
