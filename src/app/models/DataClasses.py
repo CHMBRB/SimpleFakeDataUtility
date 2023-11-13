@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 
 
 class Person:
@@ -20,3 +20,11 @@ class ContactDetail:
     city: str
     state: str
     zipcode: str
+
+class LaborDetail:
+    """Base LaborDetail Class"""
+    id: int
+    person_id: int
+    current_date: date
+    time_in: str
+    time_out: str
