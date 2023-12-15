@@ -23,6 +23,9 @@ if __name__ == "__main__":
     contact_detail_list = []
     labor_detail_list = []
 
+    # declare an integer to use for unique id field on labor detail
+    labor_detail_id = 0
+
     for i in range(number_of_records):
         # instantiate new FakeRecords
         p = FakePerson(i)
@@ -33,11 +36,14 @@ if __name__ == "__main__":
 
         for item in dates_range:
             el = LaborDetail()
+            el.id = labor_detail_id
             el.person_id = i
             el.current_date = item
             el.time_in = time(9, 0, 0).strftime("%H:%M:%S")
-            el.time_out = time(5, 0, 0).strftime("%H:%M:%S")
+            el.time_out = time(17, 0, 0).strftime("%H:%M:%S")
             labor_detail_list.append(el.__dict__)
+            # update the unique id for the next iteration
+            labor_detail_id += 1
 
     # convert the records to pandas DataFrame objects
     dfA = DataFrame(person_list)

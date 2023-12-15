@@ -1,12 +1,16 @@
 # Simple Fake Data Utility
 
-Most applications require data to be useful.
+**Most** applications require data to be useful.
 
-This project will make use of the Faker Python library to conveniently generate fake data for a common purpose. Since most systems contain Users and their respective profiles, that is what we will demonstrate as a baseline although these models can be extended to cover additional models or encapsulate more information.
+This project will make use of the Faker Python library to conveniently generate a pre-seeded fake data instance for a common purpose. Since most systems contain Users and their respective profiles, that is what we will demonstrate as a baseline although these models may be extended to cover additional attributes/properties to encapsulate more information.
 
 ## Why Python?
 
-Python is a generic, glue language available for **ANY** operating system and it supports most popular programming paradigms (functional, procedural, object-oriented, etc...). While that's not as big of a deal as it once was, it can also be installed in user space which typically doesn't require administrator privileges unlike most alternatives.
+Python is a generic, glue language available for literally **ANY** operating system and it supports most popular current programming paradigms (functional, procedural, object-oriented, etc...). While that's not as big of a deal as it once was, it may also be installed in user space (via anaconda/miniconda installers) which typically doesn't require administrator privileges unlike most alternatives.
+
+<!-- migrate sentiments about colleges and Java vs Python vs go vs other flavor of the week -->
+
+### Faker Library
 
 There are many implementations of the Faker library in various languages (C#, Ruby, PHP, Perl, Javascript, to name just a few), but Python seemed easier, more available, and most practical.
 
@@ -18,15 +22,17 @@ It is commonly suggested in Python to utilize `virtual environments`.
 
 I personally prefer a configuration which utilizes `pyenv` to manage multiple Python Versions in user space installations and then using the `pipenv` package as a secondary wrapper to manage each project's virtual environment and associated dependency graphs.
 
-### Pre-Requisite Installations
+### (Possible) Pre-Requisite Installations
 
-#### pyenv
+#### pyenv (optional)
 
 For information about pyenv installation, [Check Here](https://github.com/pyenv/pyenv#installation)
 
-#### pipenv
+#### pipenv (required unless you "circumvent")
 
 To install pipenv, make certain that your system is using the correct Python version through pyenv and directly install it into the user environment packages with the command: `pip install pipenv` or `pip3 install pipenv` as it may vary based on operating system.
+
+<!-- Does pipenv exist in conda-verse? pyenv in windows-verse?` -->
 
 ### Project Setup
 
@@ -38,7 +44,7 @@ However, since this project already contains a Pipfile, this will be achieved by
 
 ### Activate The Pipenv Virtual Environment
 
-Activation of the pipenv virtual environment is achieved by navigating to the python project's directory `./src/app` in a terminal and issuing the command: `pipenv shell`
+Activation of the pipenv virtual environment is achieved by navigating to the python project's directory `./src/app` (and/or the local directory of the Pipfile item) in a terminal and issuing the command: `pipenv shell`
 
 ### Running Main Program
 

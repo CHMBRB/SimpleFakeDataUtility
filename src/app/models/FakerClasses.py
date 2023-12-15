@@ -16,8 +16,7 @@ class FakePerson(Person):
         self.job = f.job()
         self.payrate = f.pyfloat(right_digits=2, positive=True, min_value=15.00, max_value=45.00)
         self.ssn = f.ssn()
-        # self.dob = f.date_between(start_date='-80y',end_date='-18y')
-        self.dob = f.date_of_birth()
+        self.dob = f.date_between(start_date='-80y',end_date='-18y')
 
 
 class FakeContactDetail(ContactDetail):
